@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {%block meta_description%}Опис сторінки{%endblock%} {%block meta_twitter_url%}https://mops-storage.xyz{%endblock%} {%block meta_twitter_title%}Заголовок{%endblock%} {%block meta_twitter_description%}Опис сторінки{%endblock%} {%block meta_twitter_banner%}https://cdn.discordapp.com/attachments/788772787644399617/1088228290193543311/image.png{%endblock%} {%block meta_title%}WTF{%endblock%}
+{%block body%}
+<main class="container" style="width: 90vh">
+
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>    
+    
+    
+    {% endfor %}
+
+    {% if name %}
+        <h1>Привіт {{name}}!!</h1>
+    {% else %}
+        <form method="POST" class="mb-3">
+            {{ form.hidden_tag() }}
+            {{ form.name.label(class="form-label my-2") }}
+            {{ form.name(class="form-control") }}
+            <div class="form-text">Для того, щоб познайомитися.</div>
+            <br>
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+    {% endif %}
+</main>
+{%endblock%}

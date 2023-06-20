@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{%block meta_description%}Циклова комісія комп'ютерних дисциплін Зборівського коледжу - дружня та професійна команда викладачів, які надавали якісну освіту в галузі ІТ-технологій та проводили цікаві заходи для студентів.{%endblock%}
+{%block meta_twitter_url%}http://cczborivcollegecc.pythonanywhere.com/{%endblock%}
+{%block meta_twitter_title%}Головна сторінка - ЦК Зборівсього коледжу комп'ютерних дисциплін{%endblock%}
+{%block meta_twitter_description%}Циклова комісія комп'ютерних дисциплін Зборівського коледжу - дружня та професійна команда викладачів, які надавали якісну освіту в галузі ІТ-технологій та проводили цікаві заходи для студентів.{%endblock%}
+{%block meta_twitter_banner%}{{ url_for('static', filename='assets/cover-hero.jpg')}}{%endblock%}
+{%block meta_title%}Головна сторінка - ЦК Зборівсього коледжу комп'ютерних дисциплін{%endblock%}
+{%block body%}
+<div class="background-hero d-flex align-items-center justify-content-center">
+	<div class="px-4 py-5 container text-center position-relative mt-5" style="z-index: 1;">
+		<h1 class="display-5 fw-bold lh-1 mb-3 text-light">Циклова комісія комп'ютерних дисциплін Зборівського коледжу</h1>
+		<p class="lead text-light">Циклова комісія комп'ютерних дисциплін Зборівського коледжу - дружня та професійна команда викладачів, які надавали якісну освіту в галузі ІТ-технологій та проводили цікаві заходи для студентів.</p>
+	</div>
+	<div class="hero-down"></div>
+	<div class="overlay shadow"></div>
+</div>
+
+<!--Предмети дисципліни-->
+<div>
+	<div class="container col-xxl-8 p5">
+		<h1 class="fw-bold text-center display-5 py-4 mb-4">Про 121 Інженерія Програмного Забезпечення</h1>
+		<div class="row flex-lg-row-reverse align-items-center p-1 my-4 shadow rounded-5">
+			<div class="col-lg-6"> <img src="{{ url_for('static', filename='assets/code.png')}}" class="d-block mx-lg-auto img-fluid" loading="lazy" width="700" height="500"> </div>
+			<div class="col-lg-6">
+				<h1 class="display-5 fw-semibold text-body-emphasis lh-1 mb-3">Програмування</h1>
+				<p class="lead">Навчишся розробляти програми та використовувати різні мови програмування, а також розуміти алгоритми та структури даних, які використовуються в програмуванні. Вивчення цього предмету дозволить зрозуміти, як створювати програми, які будуть ефективно працювати та розвиватися в майбутньому.</p>
+			</div>
+		</div>
+		<!--Second object-->
+		<div class="row flex-lg-row align-items-center g-5 p-3 my-4 shadow rounded-5">
+			<div class="col-10 col-sm-8 col-lg-6 container"> <img src="{{ url_for('static', filename='assets/datadase.png')}}" class="d-block mx-lg-auto img-fluid" loading="lazy" width="700" height="500"> </div>
+			<div class="col-lg-6 text-end">
+				<h1 class="display-5 fw-semibold text-body-emphasis lh-1 mb-4">База даних</h1>
+				<p class="lead float-end">Навчишся розробляти та керувати базами даних, вивчиш мову SQL, навчишся використовувати технології розробки баз даних, які дозволяють ефективно зберігати та обробляти великі об'єми даних. Вивчення цього предмету дозволить зрозуміти, як правильно проєктувати бази даних та забезпечувати їх безпеку.</p>
+			</div>
+		</div>
+		<!--Third object-->
+		<div class="row flex-lg-row-reverse align-items-center g-5 p-3 my-4 shadow rounded-5">
+			<div class="col-10 col-sm-8 col-lg-6 container"> <img src="{{ url_for('static', filename='assets/KN.png')}}" class="d-block mx-lg-auto img-fluid " loading="lazy" width="700" height="500"> </div>
+			<div class="col-lg-6 text-start">
+				<h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">Комп'ютерні мережі</h1>
+				<p class="lead float-end">Навчишся проєктувати та налаштовувати мережі, вивчиш протоколи мереж та розуміння принципу їх роботи. Вивчення цього предмету дозволить зрозуміти, як працюють комп'ютерні мережі, як їх налагоджувати та забезпечувати безпеку даних, які передаються мережею.</p>
+			</div>
+		</div>
+		<!--Fourth-->
+		<div class="row flex-lg-row align-items-center g-5 p-3 my-4 shadow rounded-5">
+			<div class="col-10 col-sm-8 col-lg-6 container"> <img src="{{ url_for('static', filename='assets/OS.png')}}" class="d-block mx-lg-auto img-fluid " loading="lazy" width="700" height="500"> </div>
+			<div class="col-lg-6 text-end">
+				<h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">Операційні системи</h1>
+				<p class="lead float-end">Навчишся розуміти, як працюють операційні системи, як взаємодіяти з ними та як розробляти власні операційні системи. Вивчення цього предмету дозволить зрозуміти, як оптимізувати роботу з комп'ютером та як розробляти програми для різних операційних систем.</p>
+			</div>
+		</div>
+		<!--Fiveth-->
+		<div class="row flex-lg-row-reverse align-items-center g-5 p-3 my-4 shadow rounded-5">
+			<div class="col-10 col-sm-8 col-lg-6 container"> <img src="{{ url_for('static', filename='assets/Web-programming.png')}}" class="d-block mx-lg-auto img-fluid " loading="lazy" width="700" height="500"> </div>
+			<div class="col-lg-6 text-start">
+				<h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">Веб-програмування</h1>
+				<p class="lead float-end">Навчишся розробляти веб-сайти та веб-додатки, використовуючи різні технології, такі як HTML, CSS, JavaScript, PHP та інші. Вивчення цього предмету дозволить зрозуміти, як розробляти веб-додатки, які взаємодіють з користувачами та базами даних.</p>
+			</div>
+		</div>
+	</div>
+</div>
+{%endblock%}

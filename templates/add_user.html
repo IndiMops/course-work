@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {%block meta_description%}Опис сторінки{%endblock%} {%block meta_twitter_url%}https://mops-storage.xyz{%endblock%} {%block meta_twitter_title%}Заголовок{%endblock%} {%block meta_twitter_description%}Опис сторінки{%endblock%} {%block meta_twitter_banner%}https://cdn.discordapp.com/attachments/788772787644399617/1088228290193543311/image.png{%endblock%} {%block meta_title%}Додати користувача - ЦК комп'ютерної дисципліни{%endblock%}
+{%block body%}
+<main class="container py-5" style="width: 90vh">
+
+    {% for message in get_flashed_messages() %}
+        <div class="alert {{ alert }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>    
+    {% endfor %}
+
+    {% if name %}
+        <h1>Список користувачів:</h1>
+        <table class="table table-bordered table-striped shadow-sm rounded-3">
+            {% for user in our_user%}
+            <tr>
+                <td>
+                    <a href="{{ url_for('update_user', id=user.id)}}">{{ user.name }}</a> - {{ user.email }} - {{ user.favorite_color }} - <a href="{{ url_for('delete_user', id=user.id)}}" class="animate-zoom trash"><i class="bi bi-trash text-danger animate-fade"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/user/add" class="btn btn-outline-primary rounded-3 shadow-sm">Назад</a>
+    {% else %}
+        <div class="shadow p-3 mb-4 rounded-3">
+            <h1>Додати користувача:</h1>
+            <form method="POST" class="my-3">
+                {{ form.hidden_tag() }}
+                {{ form.name.label(class="form-label my-2") }}
+                {{ form.name(class="form-control", placeholder="Богдан") }}
+                <br>
+                {{ form.email.label(class="form-label my-2") }}
+                {{ form.email(class="form-control", placeholder="example@mail.com") }}
+                <br>
+                {{ form.favorite_color.label(class="form-label my-2") }}
+                {{ form.favorite_color(class="form-control", placeholder="Червоний") }}
+
+                {{ form.submit(class="btn btn-primary my-3") }}
+            </form>
+        </div>
+        <h1>Список користувачів:</h1>
+        <table class="table table-bordered table-striped shadow-sm rounded-3">
+            {% for user in our_user%}
+            <tr>
+                <td>
+                    <a href="{{ url_for('update_user', id=user.id)}}">{{ user.name }}</a> - {{ user.email }} - {{ user.favorite_color }} - <a href="{{ url_for('delete_user', id=user.id)}}" class="animate-zoom trash"><i class="bi bi-trash text-danger animate-fade"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</main>
+{%endblock%}

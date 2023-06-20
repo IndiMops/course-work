@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{%block meta_description%}Сторінка новин Зборівської циклової комісії комп'ютерних дисциплін{%endblock%}
+{%block meta_twitter_url%} http://cczborivcollegecc.pythonanywhere.com/news {%endblock%}
+{%block meta_twitter_title%}Новини циклової комісії - ЦК комп'ютерних дисциплін{%endblock%}
+{%block meta_twitter_description%} Сторінка новин Зборівської циклової комісії комп'ютерних дисциплін{%endblock%}
+{%block meta_twitter_banner%}{{ url_for('static', filename='assets/cover-hero.jpg')}} {%endblock%}
+{%block meta_title%}Новини циклової комісії - ЦК комп'ютерних дисциплін{%endblock%}
+{%block body%}
+<div class="container">
+	<h1 class="text-center fw-bolder my-3">Новини циклової комісії</h1>
+	<div class="row mb-2">
+		<div class="col-md-6">
+			<div class="row g-0 border rounded-3 flex-md-row mb-4 shadow position-relative">
+				<div class="col p-4 d-flex flex-column position-static">
+					<h3 class="fw-medium">Тиждень циклової комісії комп'ютерних дисциплін</h3>
+					<p class="mb-1 text-body-secondary">1 травня 2023</p>
+					<p class="mb-auto">У рамках тижня було проведено ряд заходів під керівництвом викладачів даної комісії.
+						<br>Із понеділка свої...</p>
+          <a href="/news/1" class="stretched-link">Читати далі</a>
+        </div>
+				<div class="col-auto d-none d-lg-block">
+					<div class="news-main-thumb"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 opacity-0"> </div>
+		<div class="col-md-6 opacity-0"> </div>
+		<div class="col-md-6 opacity-0">
+			<div class="row g-0 border rounded-3 overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative">
+				<div class="col p-4 d-flex flex-column position-static">
+					<h3 class="mb-0 fw-medium">Тиждень циклової
+            комісії комп'ютерних дисциплін</h3>
+					<div class="mb-1 text-body-secondary">1 травня</div>
+					<p class="card-text mb-auto">У рамках тижня було проведено ряд заходів під керівництвом викладачів даної комісії.
+						<br>Із понеділка свої... </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> {%endblock%}
